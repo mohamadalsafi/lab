@@ -48,8 +48,33 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Container(
-        color: Colors.yellow,
+        color: Colors.white70,
+        child: Center(
+          child: ElevatedButton(onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const NewPage()),
+            );
+            print('hello');
+          },child: Text('press me'),),
+        ),
       ),
     );
   }
 }
+
+
+class NewPage extends StatelessWidget {
+  const NewPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(title: Text('new page'),),
+        body: Container(
+      child: Center(child: Text('new page')),
+
+    ));
+  }
+}
+
