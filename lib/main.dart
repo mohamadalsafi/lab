@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lab/new_page.dart';
+
+
 
 void main() {
   runApp(const MyApp());
@@ -39,10 +42,10 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              const Icon(Icons.contact_mail_sharp),
-              const Icon(Icons.contact_mail_sharp),
-              const Icon(Icons.contact_mail_sharp),
+            children: const [
+              Icon(Icons.image),
+              Icon(Icons.cable_sharp),
+              Icon(Icons.call_end_rounded),
             ],
           ),
         ),
@@ -55,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
               context,
               MaterialPageRoute(builder: (context) => const NewPage()),
             );
-            print('hello');
+
           },child: Text('press me'),),
         ),
       ),
@@ -63,18 +66,4 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-
-class NewPage extends StatelessWidget {
-  const NewPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: Text('new page'),),
-        body: Container(
-      child: Center(child: Text('new page')),
-
-    ));
-  }
-}
 
